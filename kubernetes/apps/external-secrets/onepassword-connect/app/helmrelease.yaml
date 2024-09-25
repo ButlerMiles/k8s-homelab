@@ -24,3 +24,4 @@ spec:
   values:
     connect:
       serviceType: ClusterIP
+      credentialsName: onepassword-connect-secret
