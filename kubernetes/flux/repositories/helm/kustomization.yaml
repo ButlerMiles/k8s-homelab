@@ -10,10 +10,12 @@ resources:
   - ./metrics-server.yaml
   - ./onepassword.yaml
   - ./openebs.yaml
+  - ./piraeus.yaml
   - ./postfinance.yaml
   - ./prometheus-community.yaml
   - ./spegel.yaml
   - ./stakater.yaml
+  - ./synology-csi.yaml
   - ./external-dns.yaml
   - ./ingress-nginx.yaml
   - ./k8s-gateway.yaml
