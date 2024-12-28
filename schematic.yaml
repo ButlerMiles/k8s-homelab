@@ -1,0 +1,14 @@
+#
+# Schematic file to get schematicID from Talos Factory
+#
+
+# https://www.talos.dev/v1.9/talos-guides/install/boot-assets/#example-raspberry-pi-generic-with-image-factory
+# curl -X POST --data-binary @schematic.yaml https://factory.talos.dev/schematics
+
+customization:
+  systemExtensions:
+    officialExtensions:
+      - siderolabs/iscsi-tools
+      - siderolabs/qemu-guest-agent
+      - siderolabs/tailscale
+      - siderolabs/util-linux-tools
