@@ -31,7 +31,10 @@ spec:
       enabled: true
       className: internal
       hosts:
-        - host: ["dash.${SECRET_DOMAIN}"]
+        - host: "dash.${SECRET_DOMAIN}"
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
     persistence:
       homarrDatabase:
         enabled: true
