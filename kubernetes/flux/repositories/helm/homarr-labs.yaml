@@ -1,0 +1,10 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: homarr-labs
+  namespace: dashboard
+spec:
+  type: oci
+  interval: 1h
+  url: oci://ghcr.io/homarr-labs/charts

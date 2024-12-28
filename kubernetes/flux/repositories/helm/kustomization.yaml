@@ -5,8 +5,12 @@ resources:
   - ./bjw-s.yaml
   - ./cilium.yaml
   - ./coredns.yaml
+  - ./external-dns.yaml
   - ./external-secrets.yaml
+  - ./homarr-labs.yaml
+  - ./ingress-nginx.yaml
   - ./jetstack.yaml
+  - ./k8s-gateway.yaml
   - ./metrics-server.yaml
   - ./onepassword.yaml
   - ./openebs.yaml
@@ -16,6 +20,3 @@ resources:
   - ./spegel.yaml
   - ./stakater.yaml
   - ./synology-csi.yaml
-  - ./external-dns.yaml
-  - ./ingress-nginx.yaml
-  - ./k8s-gateway.yaml
