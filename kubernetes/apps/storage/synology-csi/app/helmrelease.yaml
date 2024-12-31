@@ -70,17 +70,21 @@ spec:
         isDefault: true
       synology-iscsi-delete:
         parameters:
+          protocol: iscsi
           dsm: "${SYNOLOGY_ADDR}"
           fstype: ext4
           location: '/volume2'
-          protocol: iscsi
       synology-iscsi-retain:
         parameters:
+          protocol: iscsi
           dsm: "${SYNOLOGY_ADDR}"
           fstype: ext4
           location: '/volume2'
-          protocol: iscsi
     volumeSnapshotClasses:
+      synology-nfs-delete:
+        deletionPolicy: Delete
+      synology-nfs-retain:
+        deletionPolicy: Retain
       synology-iscsi-delete:
         deletionPolicy: Delete
       synology-iscsi-retain:
