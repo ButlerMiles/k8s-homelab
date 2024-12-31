@@ -38,14 +38,14 @@ spec:
     persistence:
       homarrDatabase:
         enabled: true
-        name: "homarr-database"
+        name: "homarr-db"
         storageClassName: "synology-nfs-retain"
         accessMode: "ReadWriteOnce"
         size: "3Gi"
         mountPath: "/appdata/db"
       homarrImages:
         enabled: true
-        name: "homarr-images"
+        name: "homarr-img"
         storageClassName: "synology-nfs-retain"
         accessMode: "ReadWriteOnce"
         size: "1Gi"
