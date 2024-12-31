@@ -47,6 +47,27 @@ spec:
         pullPolicy: IfNotPresent
         tag: v6.2.1
     storageClasses:
+      synology-nfs-delete:
+        parameters:
+          protocol: "nfs"
+          dsm: "${SYNOLOGY_ADDR}"
+          location: '/volume2/k8s/delete'
+          mountPermissions: '0755'
+        mountOptions:
+          - nfsvers=4.1
+        reclaimPolicy: Delete
+        allowVolumeExpansion: true
+      synology-nfs-retain:
+        parameters:
+          protocol: "nfs"
+          dsm: "${SYNOLOGY_ADDR}"
+          location: '/volume2/k8s/retain'
+          mountPermissions: '0755'
+        mountOptions:
+          - nfsvers=4.1
+        reclaimPolicy: Retain
+        allowVolumeExpansion: true
+        isDefault: true
       synology-iscsi-delete:
         parameters:
           dsm: "${SYNOLOGY_ADDR}"
@@ -59,7 +80,6 @@ spec:
           fstype: ext4
           location: '/volume2'
           protocol: iscsi
-        isDefault: true
     volumeSnapshotClasses:
       synology-iscsi-delete:
         deletionPolicy: Delete
