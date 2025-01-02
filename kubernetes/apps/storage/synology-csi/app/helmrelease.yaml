@@ -49,24 +49,24 @@ spec:
     storageClasses:
       synology-nfs-delete:
         parameters:
-          protocol: nfs
+          protocol: "nfs"
           dsm: "${SYNOLOGY_ADDR}"
           location: '/volume2'
           mountPermissions: '0755'
         mountOptions:
           - nfsvers=4.1
         reclaimPolicy: Delete
-        allowVolumeExpansion: true
+        # allowVolumeExpansion: true
       synology-nfs-retain:
         parameters:
-          protocol: nfs
+          protocol: "nfs"
           dsm: "${SYNOLOGY_ADDR}"
           location: '/volume2'
           mountPermissions: '0755'
         mountOptions:
           - nfsvers=4.1
         reclaimPolicy: Retain
-        allowVolumeExpansion: true
+        # allowVolumeExpansion: true
         isDefault: true
       synology-iscsi-delete:
         parameters:
