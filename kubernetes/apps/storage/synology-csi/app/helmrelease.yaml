@@ -47,45 +47,45 @@ spec:
         pullPolicy: IfNotPresent
         tag: v6.2.1
     storageClasses:
-      synology-nfs-delete:
+      synology-iscsi-delete:
         parameters:
-          protocol: "nfs"
+          protocol: iscsi
           dsm: "${SYNOLOGY_ADDR}"
+          fstype: ext4
           location: '/volume2'
-          mountPermissions: '0755'
-        mountOptions:
-          - nfsvers=4.1
-        reclaimPolicy: Delete
-        # allowVolumeExpansion: true
-      synology-nfs-retain:
+      synology-iscsi-retain:
         parameters:
-          protocol: "nfs"
+          protocol: iscsi
           dsm: "${SYNOLOGY_ADDR}"
+          fstype: ext4
           location: '/volume2'
-          mountPermissions: '0755'
-        mountOptions:
-          - nfsvers=4.1
-        reclaimPolicy: Retain
-        # allowVolumeExpansion: true
         isDefault: true
-      synology-iscsi-delete:
-        parameters:
-          protocol: iscsi
-          dsm: "${SYNOLOGY_ADDR}"
-          fstype: ext4
-          location: '/volume2'
-      synology-iscsi-retain:
-        parameters:
-          protocol: iscsi
-          dsm: "${SYNOLOGY_ADDR}"
-          fstype: ext4
-          location: '/volume2'
+      # synology-nfs-delete:
+      #   parameters:
+      #     protocol: "nfs"
+      #     dsm: "${SYNOLOGY_ADDR}"
+      #     location: '/volume2'
+      #     mountPermissions: '0755'
+      #   mountOptions:
+      #     - nfsvers=4.1
+      #   reclaimPolicy: Delete
+      #   # allowVolumeExpansion: true
+      # synology-nfs-retain:
+      #   parameters:
+      #     protocol: "nfs"
+      #     dsm: "${SYNOLOGY_ADDR}"
+      #     location: '/volume2'
+      #     mountPermissions: '0755'
+      #   mountOptions:
+      #     - nfsvers=4.1
+      #   reclaimPolicy: Retain
+      #   # allowVolumeExpansion: true
     volumeSnapshotClasses:
-      synology-nfs-delete:
-        deletionPolicy: Delete
-      synology-nfs-retain:
-        deletionPolicy: Retain
       synology-iscsi-delete:
         deletionPolicy: Delete
       synology-iscsi-retain:
         deletionPolicy: Retain
+      # synology-nfs-delete:
+      #   deletionPolicy: Delete
+      # synology-nfs-retain:
+      #   deletionPolicy: Retain
