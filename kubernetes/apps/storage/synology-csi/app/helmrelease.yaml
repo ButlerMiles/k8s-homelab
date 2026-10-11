@@ -28,7 +28,7 @@ spec:
       nodeDriverRegistrar:
         image: registry.k8s.io/sig-storage/csi-node-driver-registrar
         pullPolicy: IfNotPresent
-        tag: v2.6.3
+        tag: v2.18.0
       plugin:
         image: ghcr.io/zebernst/synology-csi
         pullPolicy: IfNotPresent
