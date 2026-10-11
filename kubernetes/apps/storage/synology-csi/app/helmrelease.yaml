@@ -24,7 +24,7 @@ spec:
       attacher:
         image: registry.k8s.io/sig-storage/csi-attacher
         pullPolicy: IfNotPresent
-        tag: v4.2.0
+        tag: v4.13.0
       nodeDriverRegistrar:
         image: registry.k8s.io/sig-storage/csi-node-driver-registrar
         pullPolicy: IfNotPresent
