@@ -45,7 +45,7 @@ spec:
       snapshotter:
         image: registry.k8s.io/sig-storage/csi-snapshotter
         pullPolicy: IfNotPresent
-        tag: v6.2.1
+        tag: v6.3.4
     storageClasses:
       synology-iscsi-delete:
         parameters:
